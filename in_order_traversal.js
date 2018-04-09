@@ -1,18 +1,18 @@
 const createBinaryTree = require("./utils").createBinaryTree;
 const log = require("./utils").log;
 
-
-function inorder_traversal(node) {
+// 中序遍历按照“左孩子-根结点-右孩子”的顺序进行访问。
+function in_order_traversal(node) {
     if (!node) {
         return;
     }
-    inorder_traversal(node.left);
+    in_order_traversal(node.left);
     log(node.data);
-    inorder_traversal(node.right);
+    in_order_traversal(node.right);
 }
 
 
 
 var root = createBinaryTree();
-inorder_traversal(root);
+in_order_traversal(root);
 process.stdout.write('\n');

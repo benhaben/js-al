@@ -1,8 +1,8 @@
-
 function Node() {
     this.left = null;
     this.right = null;
     this.data = "";
+    this.first = true;
 }
 
 function createBinaryTree() {
@@ -32,11 +32,39 @@ function createBinaryTree() {
     return root;
 }
 
-function log (str){
+/********* stack*/
+function Stack() {
+    this._stack = [];
+}
+
+Stack.prototype.push = function (node) {
+    this._stack.push(node);
+};
+Stack.prototype.top = function () {
+    if (this._stack.length > 0) {
+        return this._stack[this._stack.length - 1];
+    }
+    else {
+        return null;
+    }
+};
+Stack.prototype.pop = function () {
+    return this._stack.pop();
+};
+Stack.prototype.size = function () {
+    return this._stack.length;
+};
+
+/*********stack*/
+
+function log(str) {
     process.stdout.write(str);
     process.stdout.write('\t');
 
 }
+
+
 exports.createBinaryTree = createBinaryTree;
 exports.Node = Node;
 exports.log = log;
+exports.Stack = Stack;
