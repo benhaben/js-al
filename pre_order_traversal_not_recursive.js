@@ -2,7 +2,7 @@ const createBinaryTree = require("./utils").createBinaryTree;
 const log = require("./utils").log;
 const Stack = require("./utils").Stack;
 
-function inorder_traversal_not_recursive(node) {
+function pre_order_traversal_not_recursive(node) {
 
     var stack = new Stack();
     stack.push(node);
@@ -23,5 +23,5 @@ function inorder_traversal_not_recursive(node) {
 }
 
 var root = createBinaryTree();
-inorder_traversal_not_recursive(root);
+pre_order_traversal_not_recursive(root);
 process.stdout.write('\n');
