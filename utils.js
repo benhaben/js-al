@@ -58,13 +58,17 @@ Stack.prototype.size = function () {
 /*********stack*/
 
 function log(str) {
-    process.stdout.write(str);
+    process.stdout.write(str.toString());
     process.stdout.write('\t');
 
 }
 
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
 exports.createBinaryTree = createBinaryTree;
 exports.Node = Node;
 exports.log = log;
 exports.Stack = Stack;
+exports.isNumeric = isNumeric;

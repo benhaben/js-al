@@ -1,5 +1,5 @@
-const createBinaryTree = require("./utils").createBinaryTree;
-const log = require("./utils").log;
+const createBinaryTree = require("../utils").createBinaryTree;
+const log = require("../utils").log;
 
 // 前序遍历按照“根结点-左孩子-右孩子”的顺序进行访问。
 function pre_order_traversal(node) {

@@ -1,6 +1,6 @@
-const createBinaryTree = require("./utils").createBinaryTree;
-const log = require("./utils").log;
-const Stack = require("./utils").Stack;
+const createBinaryTree = require("../utils").createBinaryTree;
+const log = require("../utils").log;
+const Stack = require("../utils").Stack;
 
 /*****
  对于任一结点P，

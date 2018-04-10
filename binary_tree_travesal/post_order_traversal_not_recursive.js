@@ -1,6 +1,6 @@
-const createBinaryTree = require("./utils").createBinaryTree;
-const log = require("./utils").log;
-const Stack = require("./utils").Stack;
+const createBinaryTree = require("../utils").createBinaryTree;
+const log = require("../utils").log;
+const Stack = require("../utils").Stack;
 
 // 后序遍历按照“左孩子-右孩子-根结点”的顺序进行访问。
 // 要保证根结点在左孩子和右孩子访问之后才能访问，因此对于任一结点P，先将其入栈。

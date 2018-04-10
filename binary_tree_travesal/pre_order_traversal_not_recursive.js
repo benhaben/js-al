@@ -1,6 +1,6 @@
-const createBinaryTree = require("./utils").createBinaryTree;
-const log = require("./utils").log;
-const Stack = require("./utils").Stack;
+const createBinaryTree = require("../utils").createBinaryTree;
+const log = require("../utils").log;
+const Stack = require("../utils").Stack;
 
 function pre_order_traversal_not_recursive(node) {
 
