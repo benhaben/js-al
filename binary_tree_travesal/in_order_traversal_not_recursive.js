@@ -31,9 +31,8 @@ function in_order_traversal_not_recursive(node) {
             stack.push(cur);
         }
     }
-
 }
 
 var root = createBinaryTree();
-in_order_traversal_not_recursive(root);
+in_order_traversal_not_recursive1(root);
 process.stdout.write('\n');

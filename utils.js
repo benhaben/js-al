@@ -67,8 +67,15 @@ function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+
+function isArray(o) {
+    return Object.prototype.toString.call(o) === '[object Array]';
+}
+
+
 exports.createBinaryTree = createBinaryTree;
 exports.Node = Node;
 exports.log = log;
 exports.Stack = Stack;
 exports.isNumeric = isNumeric;
+exports.isArray = isArray;

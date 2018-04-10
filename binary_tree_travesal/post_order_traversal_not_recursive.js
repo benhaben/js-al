@@ -59,7 +59,30 @@ function post_order_traversal_not_recursive1(node) {
 
 }
 
+function post_order_traversal_not_recursive2(node){
+    var stack = new Stack();
+    stack.push(node);
+    var cur = node;
+
+    while (stack.size() !== 0 && cur) {
+        cur = stack.top();
+        if(cur.left && !cur.left.isUsed){
+            cur = cur.left;
+            cur.isUsed = true;
+            stack.push(cur);
+        }else if(cur.right && !cur.right.isUsed) {
+            cur = cur.right;
+            cur.isUsed = true;
+            stack.push(cur);
+        }
+        else{
+            cur = stack.pop();
+            log(cur.data);
+        }
+    }
+}
+
 var root = createBinaryTree();
 // post_order_traversal_not_recursive(root);
-post_order_traversal_not_recursive1(root);
+post_order_traversal_not_recursive2(root);
 process.stdout.write('\n');
