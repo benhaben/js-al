@@ -24,7 +24,6 @@ function _binary_search_recursive(a, x, start, end) {
         }
     }
     else {
-        // 溢出了，js并不会崩溃
         return -1;
     }
 }
